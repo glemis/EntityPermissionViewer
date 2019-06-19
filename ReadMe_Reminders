@@ -1,0 +1,35 @@
+https://docs.microsoft.com/en-us/powerapps/developer/component-framework/create-custom-controls-using-pcf
+
+Set Up Folder for app (in disired folder run next 2 lines)
+pac pcf init --namespace <specify your namespace here> --name <put component name here> --template <component type>
+npm install
+
+Build 
+npm run build
+
+Debug in broweser 
+npm start
+
+
+//In debug left pane is your control. Right pane is your input (which would be your CRM field) and under that is an output of the control
+
+
+Component getOutput call will be rendered in output on right 
+
+
+
+Deploy component 
+
+Create a new solution project in the directory of your choice
+cd <your new folder>
+pac solution init --publisherName <enter your publisher name> --customizationPrefix <enter your publisher name>
+
+pac solution add-reference --path <path or relative path of your PowerApps component framework project on disk>
+
+To generate a zip file from your solution project, you will need to cd into your solution project directory and build the project using the command 
+msbuild /t:restore 
+then 
+msbuild
+
+
+The generated solution zip file is located in \bin\debug\
