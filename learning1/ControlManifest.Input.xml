@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="learning1" constructor="learning1" version="0.0.20" display-name-key="Entity Permission Tree" description-key="Show network graph of entity permissions" control-type="standard">
+  <control namespace="learning1" constructor="learning1" version="0.0.21" display-name-key="Entity Permission Tree" description-key="Show network graph of entity permissions" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <data-set name="dataSetGrid" display-name-key="Dataset Control Demo">
           <!-- 'property-set' node represents a unique, configurable property that each record in the dataset must provide. -->

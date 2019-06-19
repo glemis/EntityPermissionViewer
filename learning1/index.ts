@@ -233,7 +233,9 @@ export class learning1 implements ComponentFramework.StandardControl<IInputs, IO
 		  console.debug(element);
 		  this.dataWindow.innerHTML += 
 		  `<div>
-		  	<div><a href="#" onclick="Xrm.Utility.openEntityForm('adx_entitypermission','${element.id}');">Navigate to record</a></div>
+		  	<div><a href="#" onclick="Xrm.Utility.openEntityForm('adx_entitypermission','${element.id}',null,{
+				openInNewWindow: true
+			   });">Navigate to record</a></div>
 			<div>Name: ${element.name}</div>
 			<div>Logical Name: ${element.label}</div>
 			<div>Scope: ${element.scope}</div>	
