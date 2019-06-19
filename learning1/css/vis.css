@@ -32,3 +32,57 @@
     top: 15px;
     left: 30px;
 }
+
+table.permissions{
+    color: #333; /* Lighten up font color */
+    font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+    width: 100%; 
+    border-collapse: 
+    collapse; border-spacing: 0; 
+}
+table.permissions td, table.permissions th {  
+    border: 1px solid #CCC; height: 30px;
+}
+
+table.permissions th {  
+    background: #F3F3F3; /* Light grey background */
+    font-weight: bold; /* Make sure they're bold */
+
+}
+table.permissions td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+
+table.permissions tr td:hover { background: #666; color: #FFF; }  
+
+.nodeDetails a {
+    background-color: #bd0000;
+    box-shadow: 0 2px 0 #c03100;
+    color: white;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.nodeDetails a:hover {
+    background-color: #e30707;
+    cursor: pointer;
+}
+
+.nodeDetails{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    width: 300px;
+    height: 160px;
+    border: 1px solid;
+    padding: 5px;
+    overflow: auto;
+    background: white;
+}
+.nodeDetails>div
+{
+    border-bottom:1px solid
+}

@@ -48,16 +48,6 @@ export class learning1 implements ComponentFramework.StandardControl<IInputs, IO
 		container.appendChild(this.mainContainer);
 
 		this.dataWindow = document.createElement("div");
-		this.dataWindow.setAttribute("style", 
-		`position: absolute;
-		top: 80px;
-		left: 35px;
-		width: 500px;
-		height: 160px;
-		border: 1px solid;
-		padding: 5px;
-		overflow: auto;
-		background: white;`);
 		this.dataWindow.setAttribute("class", "nodeDetails");
 
 		container.appendChild(this.dataWindow);
@@ -238,29 +228,29 @@ export class learning1 implements ComponentFramework.StandardControl<IInputs, IO
 		clickedNodes.forEach(element => {
 		  console.debug(element);
 		  this.dataWindow.innerHTML += 
-		  `<div style="border-bottom:1px solid">
-			  <div>Id: ${element.id}</div>
-			  <div>Label: ${element.label}</div>
-			  <div><a href="#" onclick="Xrm.Utility.openEntityForm('adx_entitypermission','${element.id}');">Name: ${element.name}</a></div>
-			  <div>Scope: ${element.scope}</div>a
-			  <table>
-				  <thead>
-					  <th>C</th>
-					  <th>R</th>
-					  <th>U</th>
-					  <th>D</th>
-					  <th>A</th>
-					  <th>AT</th>
-				  </thead>
-				  <tbody>
-					  <td>${element.create}</td>
-					  <td>${element.read}</td>
-					  <td>${element.write}</td>
-					  <td>${element.delete}</td>
-					  <td>${element.append}</td>
-					  <td>${element.appendTo}</td>
-				  </tbody>
-			  </table>
+		  `<div>
+		  	<div><a href="#" onclick="Xrm.Utility.openEntityForm('adx_entitypermission','${element.id}');">Navigate to record</a></div>
+			<div>Name: ${element.name}</div>
+			<div>Logical Name: ${element.label}</div>
+			<div>Scope: ${element.scope}</div>	
+			<table class="permissions">
+				<thead>
+					<th>C</th>
+					<th>R</th>
+					<th>U</th>
+					<th>D</th>
+					<th>A</th>
+					<th>AT</th>
+				</thead>
+				<tbody>
+					<td>${element.create}</td>
+					<td>${element.read}</td>
+					<td>${element.write}</td>
+					<td>${element.delete}</td>
+					<td>${element.append}</td>
+					<td>${element.appendTo}</td>
+				</tbody>
+			</table>
 		  </div>`;
 		});
 		if(clickedNodes.length == 0){
