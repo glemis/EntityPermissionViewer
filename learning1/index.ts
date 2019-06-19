@@ -115,7 +115,11 @@ export class learning1 implements ComponentFramework.StandardControl<IInputs, IO
 							hover: {
 							  border: "#e1a33d",
 							  background: "#f7c572"
-							}
+							},
+							highlight: {
+								border: "#e1a33d",
+								background: "#f7c572"
+							  }
 						}
 					}
 					this.nodes.push(node);
