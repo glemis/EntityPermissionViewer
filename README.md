@@ -1,4 +1,4 @@
-# EntityPermissionViewer
+test # EntityPermissionViewer
 Allows the view of entity permissions tree in Dynamics 365 PCF Control.
 
 Meant to be placed on a view for entity permissions with show only related = false.
